@@ -1,0 +1,119 @@
+[
+  {
+    "plugin": "Elementor",
+    "title": "Reverb Demo",
+    "file": "elementor-11417-2025-04-27.json",
+    "type": "json",
+    "description": "A demonstration of the reverb effect with various room sizes and decay times.",
+    "fileSize": "55.2 KB",
+    "icon": "/icons/plugin-elementor-1749033249258.png"
+  },
+  {
+    "plugin": "AudioProcessor",
+    "title": "Compressor Settings",
+    "file": "compressor-preset.json",
+    "type": "json",
+    "description": "Professional compressor settings for vocal recording and mastering.",
+    "fileSize": "1.2 KB",
+    "icon": "🎵"
+  },
+  {
+    "plugin": "VideoEditor",
+    "title": "Color Grading LUT",
+    "file": "cinematic-lut.xml",
+    "type": "xml",
+    "description": "Cinematic color grading lookup table for film-style video processing.",
+    "fileSize": "512 KB",
+    "icon": "🎬"
+  },
+  {
+    "plugin": "VideoEditor",
+    "title": "Transition Pack",
+    "file": "smooth-transitions.csv",
+    "type": "csv",
+    "description": "Collection of smooth transition effects for professional video editing.",
+    "fileSize": "15.8 MB",
+    "icon": "🎬"
+  },
+  {
+    "plugin": "ImageFilter",
+    "title": "Vintage Filter",
+    "file": "vintage-filter.json",
+    "type": "json",
+    "description": "Authentic vintage photo filter with film grain and color adjustments.",
+    "fileSize": "3.1 KB",
+    "icon": "🖼️"
+  },
+  {
+    "plugin": "ImageFilter",
+    "title": "HDR Processing",
+    "file": "hdr-sample.xml",
+    "type": "xml",
+    "description": "High dynamic range image processing example with tone mapping.",
+    "fileSize": "8.7 MB",
+    "icon": "🖼️"
+  },
+  {
+    "plugin": "SynthEngine",
+    "title": "Analog Bass",
+    "file": "analog-bass.xml",
+    "type": "xml",
+    "description": "Classic analog synthesizer bass sound with sub-oscillator and filter sweep.",
+    "fileSize": "4.5 KB",
+    "icon": "🎹"
+  },
+  {
+    "plugin": "SynthEngine",
+    "title": "Ambient Pad",
+    "file": "ambient-pad.csv",
+    "type": "csv",
+    "description": "Ethereal ambient pad sound perfect for atmospheric music production.",
+    "fileSize": "3.2 MB",
+    "icon": "🎹"
+  },
+  {
+    "plugin": "EffectsRack",
+    "title": "Guitar Distortion",
+    "file": "guitar-distortion.json",
+    "type": "json",
+    "description": "High-gain guitar distortion with tube saturation and cabinet simulation.",
+    "fileSize": "2.8 KB",
+    "icon": "🎸"
+  },
+  {
+    "plugin": "EffectsRack",
+    "title": "Vocal Chain",
+    "file": "vocal-chain.xml",
+    "type": "xml",
+    "description": "Complete vocal processing chain with EQ, compression, and reverb.",
+    "fileSize": "1.9 KB",
+    "icon": "🎸"
+  },
+  {
+    "plugin": "MIDITools",
+    "title": "Chord Progressions",
+    "file": "chord-progressions.csv",
+    "type": "csv",
+    "description": "Collection of popular chord progressions for songwriting inspiration.",
+    "fileSize": "12.3 KB",
+    "icon": "🎼"
+  },
+  {
+    "plugin": "MIDITools",
+    "title": "Drum Patterns",
+    "file": "drum-patterns.json",
+    "type": "json",
+    "description": "Versatile drum patterns for various musical genres and styles.",
+    "fileSize": "8.7 KB",
+    "icon": "🎼"
+  },
+  {
+    "plugin": "BetterDocs",
+    "title": "5 Categories, 25 Docs Data",
+    "file": "betterdocs.2024-12-15.xml",
+    "type": "xml",
+    "description": "Contains 5 Categories and 25 Docs Data of BetterDocs WordPress",
+    "fileSize": "6.9 MB",
+    "icon": "/icons/plugin-betterdocs-1749033249259.png"
+  }
+]

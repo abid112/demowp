@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "username": "abid",
+    "password": "2|EGNC0MkKap",
+    "role": "admin",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "isDefault": true
+  },
+  {
+    "id": 2,
+    "username": "rasel",
+    "password": "gedDQwS9W6cGZwb",
+    "role": "admin",
+    "createdAt": "2025-05-29T07:25:14.048Z",
+    "isDefault": false
+  }
+]

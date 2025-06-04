@@ -1,0 +1,6 @@
+Room Type,Decay Time,Pre-delay,Wet Level,Dry Level
+Small Room,1.2,15,30,70
+Medium Hall,2.8,25,40,60
+Large Cathedral,5.5,35,50,50
+Plate Reverb,3.2,10,45,55
+Spring Reverb,1.8,5,35,65

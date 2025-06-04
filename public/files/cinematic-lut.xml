@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colorGrading>
+  <lut name="Cinematic">
+    <shadows>
+      <red>0.85</red>
+      <green>0.90</green>
+      <blue>1.15</blue>
+    </shadows>
+    <midtones>
+      <red>1.05</red>
+      <green>1.00</green>
+      <blue>0.95</blue>
+    </midtones>
+    <highlights>
+      <red>1.20</red>
+      <green>1.10</green>
+      <blue>0.85</blue>
+    </highlights>
+  </lut>
+</colorGrading>

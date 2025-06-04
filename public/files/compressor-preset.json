@@ -1,0 +1,12 @@
+{
+  "name": "Vocal Compressor",
+  "type": "compressor",
+  "settings": {
+    "threshold": -18,
+    "ratio": 3.5,
+    "attack": 2.5,
+    "release": 150,
+    "knee": 2.0,
+    "makeupGain": 3.2
+  }
+}
