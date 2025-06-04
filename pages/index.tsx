@@ -134,7 +134,7 @@ export default function Home() {
               Showing {startIndex + 1}-{Math.min(endIndex, filteredPlugins.length)} of {filteredPlugins.length} plugins
               {searchTerm && (
                 <span className="ml-2">
-                  matching "<span className="font-medium">{searchTerm}</span>"
+                  matching &quot;<span className="font-medium">{searchTerm}</span>&quot;
                 </span>
               )}
               {filteredPlugins.length !== plugins.length && (

@@ -145,7 +145,7 @@ export default function AdminPanel() {
           <span className="font-medium">Delete Plugin</span>
         </div>
         <p className="text-sm text-gray-600">
-          Are you sure you want to delete "{plugin.plugin}"?
+          Are you sure you want to delete &quot;{plugin.plugin}&quot;?
         </p>
         <div className="flex space-x-2 justify-end">
           <button
@@ -161,7 +161,7 @@ export default function AdminPanel() {
               const updatedPlugins = plugins.filter((_, i) => i !== index);
               savePlugins(updatedPlugins);
               toast.dismiss(t.id);
-              toast.success(`Plugin "${plugin.plugin}" deleted successfully`);
+              toast.success(`Plugin &quot;${plugin.plugin}&quot; deleted successfully`);
             }}
             className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600"
           >
@@ -205,9 +205,9 @@ export default function AdminPanel() {
 
     // Show appropriate success message
     if (isEditing) {
-      toast.success(`Plugin "${plugin.plugin}" updated successfully!`);
+      toast.success(`Plugin &quot;${plugin.plugin}&quot; updated successfully!`);
     } else {
-      toast.success(`Plugin "${plugin.plugin}" added successfully!`);
+      toast.success(`Plugin &quot;${plugin.plugin}&quot; added successfully!`);
     }
   };
 
