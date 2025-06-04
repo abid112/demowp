@@ -23,6 +23,7 @@ export default function AdminPluginForm({ plugin, onSave, onCancel }: AdminPlugi
   const [uploadProgress, setUploadProgress] = useState(0);
   const [selectedIconFile, setSelectedIconFile] = useState<File | null>(null);
   const [iconPreview, setIconPreview] = useState<string | null>(null);
+  const [uploadingIcon, setUploadingIcon] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -84,6 +85,7 @@ export default function AdminPluginForm({ plugin, onSave, onCancel }: AdminPlugi
     }
 
     setSelectedIconFile(file);
+    setUploadingIcon(true);
 
     // Create preview URL
     const reader = new FileReader();
@@ -93,7 +95,7 @@ export default function AdminPluginForm({ plugin, onSave, onCancel }: AdminPlugi
     };
     reader.readAsDataURL(file);
 
-    // Upload the file to server
+    // Upload the file to Supabase Storage
     try {
       const formData = new FormData();
       formData.append('icon', file);
@@ -105,17 +107,21 @@ export default function AdminPluginForm({ plugin, onSave, onCancel }: AdminPlugi
 
       if (response.ok) {
         const data = await response.json();
-        // Update form data with the file path instead of base64
+        // Update form data with the cloud storage URL
         setFormData(prev => ({
           ...prev,
-          icon: data.iconPath // Store the file path
+          icon: data.iconPath // Store the Supabase Storage URL
         }));
+        alert('Icon uploaded successfully to cloud storage!');
       } else {
-        alert('Failed to upload icon');
+        const errorData = await response.json();
+        alert(`Failed to upload icon: ${errorData.details || errorData.error}`);
       }
     } catch (error) {
       console.error('Icon upload error:', error);
-      alert('Failed to upload icon');
+      alert('Failed to upload icon. Please check your internet connection.');
+    } finally {
+      setUploadingIcon(false);
     }
   };
 
@@ -299,15 +305,21 @@ export default function AdminPluginForm({ plugin, onSave, onCancel }: AdminPlugi
                       type="file"
                       accept="image/*"
                       onChange={handleIconUpload}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                      disabled={uploadingIcon}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 disabled:opacity-50"
                     />
-                    {selectedIconFile && (
+                    {uploadingIcon && (
+                      <div className="mt-2 text-sm text-blue-600">
+                        ⏳ Uploading to cloud storage...
+                      </div>
+                    )}
+                    {selectedIconFile && !uploadingIcon && (
                       <div className="mt-2 text-sm text-green-600">
                         ✅ Icon uploaded: {selectedIconFile.name}
                       </div>
                     )}
                     <p className="mt-1 text-xs text-gray-500">
-                      Optional: Upload a custom icon or use the default 🔌 plugin icon
+                      Optional: Upload a custom icon or use the default 🔌 plugin icon. Icons are stored in cloud storage for Vercel compatibility.
                     </p>
                   </div>
                 </div>
